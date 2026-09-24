@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 TeamG AI Assistant
 
-## Getting Started
+Asistente de Inteligencia Artificial local desarrollado con **Next.js**, **LangChain** y **Ollama**, completamente containerizado mediante **Docker Compose**.
 
-First, run the development server:
+## 🚀 Tecnologías Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Frontend / Framework:** Next.js (TypeScript, Tailwind CSS)
+* **Orquestación LLM:** LangChain
+* **Motor LLM Local:** Ollama (`qwen2.5:7b`)
+* **Containerización:** Docker & Docker Compose
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Arquitectura e Infraestructura
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+El proyecto utiliza una red privada de Docker para comunicar la aplicación web con el servicio de Ollama de forma transparente:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* `teamg-app`: Interfaz web en Next.js corriendo en el puerto `3000`.
+* `teamg-ollama`: Servicio de Ollama exponiendo el modelo en el puerto `11434`.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Requisitos Previos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* [Docker Desktop](https://www.docker.com/) instalado y corriendo.
+* Git.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚙️ Instalación y Configuración
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clonar el repositorio:**
+   git clone [https://github.com/joaquinsierra-e/TeamG-IA.git](https://github.com/joaquinsierra-e/TeamG-IA.git)
+   cd TeamG-IA
